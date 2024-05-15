@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+img{
+  vertical-align: middle;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  display: inline-block;
+}
+
+@layer components {
+  .CircularProgressbar .CircularProgressbar-trail {
+    stroke-width: 4px;
+  }
+
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke-width: 4px;
+    stroke: #262626;
+  }
+}
+
+@layer components {
+  .service .slick-slide {
+    width: 370px !important;
+    margin: 0px 8px;
+  }
+
+  .service .slick-list {
+    height: 510px;
+  }
+
+  @media (max-width:1024px) {
+    .service .slick-slide {
+      width: 410px !important;
+    }
+  }
+
+  @media (max-width:768px) {
+    .service .slick-slide {
+      width: 348px !important;
+    }
+
+    .service .slick-list {
+      height: 548px !important;
+    }
+  }
+
+  @media (max-width:736px) {
+    .service .slick-slide {
+      width: 292px !important;
+    }
+
+    .service .slick-list {
+      height: 560px !important;
+    }
+  }
+
+  @media (max-width:480px) {
+    .service .slick-slide {
+      width: 356px !important;
+    }
+
+    .service .slick-list {
+      height: 510px !important;
+    }
+  }
+
+  @media (max-width:380px) {
+    .service .slick-slide {
+      width: 318px !important;
+    }
+
+    .service .slick-list {
+      height: 540px !important;
+    }
+  }
+
+  .service .slick-dots {
+    display: flex !important;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+  }
+
+  .service .slick-dots li {
+    width: 12px;
+    height: 12px;
+    margin: 0px 3px;
+    border-radius: 50%;
+    background: #d6d6d6bd;
+    text-align: center;
+    line-height: 12px;
+  }
+
+  .service .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #262626;
+    color: transparent;
+    opacity: 0;
+  }
+
+  .service .slick-dots li.slick-active button {
+    opacity: 1;
+  }
+
+  .service .slick-dots li.slick-active button::before{
+    opacity: 0;
+  }
+}
+
+/* portfolio slider */
+
+@layer components {
+
+  .portfolio .slick-dots {
+    display: flex !important;
+    position: absolute;
+    left: 80%;
+    bottom: 48px;
+    transform: translateX(-20%);
+  }
+
+  .portfolio .slick-dots li {
+    width: 12px;
+    height: 12px;
+    margin: 0px 3px;
+    border-radius: 50%;
+    background: skyblue;
+    text-align: center;
+    line-height: 12px;
+  }
+
+  .portfolio .slick-dots li button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #262626;
+    color: transparent;
+    opacity: 0;
+  }
+
+  .portfolio .slick-dots li.slick-active button {
+    opacity: 1;
+  }
+
+  .portfolio .slick-dots li.slick-active button::before{
+    opacity: 0;
+  }
+}
