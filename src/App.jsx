@@ -1,6 +1,4 @@
-import { Zoom } from 'react-preloaders';
 import ScrollToTop from "react-scroll-to-top";
-
 
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -13,11 +11,11 @@ import Blogs from './components/Blogs';
 import Contact from './components/Contact';
 
 function App() {
-
   return (
     <>
-      <Zoom background="#f4f4f4" color={'#262728'}/>
-      <ScrollToTop smooth className='bg-[#f4f4f4] rounded-3xl z-50 flex items-center justify-center'/>
+      <div className="scroll">
+        <ScrollToTop smooth />
+      </div>
 
       <Navbar/>
       <Hero/>

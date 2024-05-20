@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
   outline: 0;
 }
 
-img{
+img {
   vertical-align: middle;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-a{
+a {
   text-decoration: none;
   display: inline-block;
 }
@@ -42,13 +42,13 @@ a{
     height: 510px;
   }
 
-  @media (max-width:1024px) {
+  @media (max-width: 1024px) {
     .service .slick-slide {
       width: 410px !important;
     }
   }
 
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     .service .slick-slide {
       width: 348px !important;
     }
@@ -58,7 +58,7 @@ a{
     }
   }
 
-  @media (max-width:736px) {
+  @media (max-width: 736px) {
     .service .slick-slide {
       width: 292px !important;
     }
@@ -68,7 +68,7 @@ a{
     }
   }
 
-  @media (max-width:480px) {
+  @media (max-width: 480px) {
     .service .slick-slide {
       width: 356px !important;
     }
@@ -78,7 +78,7 @@ a{
     }
   }
 
-  @media (max-width:380px) {
+  @media (max-width: 380px) {
     .service .slick-slide {
       width: 318px !important;
     }
@@ -119,7 +119,7 @@ a{
     opacity: 1;
   }
 
-  .service .slick-dots li.slick-active button::before{
+  .service .slick-dots li.slick-active button::before {
     opacity: 0;
   }
 }
@@ -127,7 +127,6 @@ a{
 /* portfolio slider */
 
 @layer components {
-
   .portfolio .slick-dots {
     display: flex !important;
     position: absolute;
@@ -159,7 +158,26 @@ a{
     opacity: 1;
   }
 
-  .portfolio .slick-dots li.slick-active button::before{
+  .portfolio .slick-dots li.slick-active button::before {
     opacity: 0;
+  }
+}
+
+@layer components {
+  .CircularProgressbar .CircularProgressbar-text {
+    fill: #262626;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .scroll .scroll-to-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 54px;
+    border-radius: 50%;
+    background: #f4f4f4;
+    z-index: 50;
   }
 }

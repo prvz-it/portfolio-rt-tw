@@ -3,44 +3,43 @@ import MarginL from './MarginL';
 import Container from './Container';
 import MarginX from './MarginX';
 
+import HeaderReusable from './reusable/HeaderReusable';
+import ContactReusable from './reusable/ContactReusable';
+
 import { HiArrowLongRight } from "react-icons/hi2";
 
 import { LuMapPin, LuPhoneCall } from "react-icons/lu";
 import { BsEnvelopeAt, BsGlobe2 } from "react-icons/bs";
 
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
-import ContactReusable from './reusable/ContactReusable';
-
 
 const Contact = () => {
   return (
     <div id="contact">
         <MarginL>
             <Container>
-                <MarginX className="pt-24">
-                    <div className="relative z-0 before:absolute before:content[''] before:top-[54%] before:right-[0px] before:w-full before:h-[1px] before:bg-[#eaeaea] before:-z-10 after:absolute after:content[''] after:top-[54%] after:right-[0px] after:w-[60px] after:h-[1px] after:bg-Main after:z-10 ">
-                        <h2 className='pr-[18px] bg-white inline-block font-playFair font-bold xl:text-[66px] lg:text-[60px] text-[36px] text-Main_Tx duration-500'><span className='relative z-0 before:absolute before:content[""] lg:before:bottom-[8px] before:bottom-[4px] before:left-[0px] before:w-full lg:before:h-[10px] before:h-[6px] before:bg-[#b7b7b7] before:rounded-lg before:-z-10'>Contact</span> Me</h2>
-                    </div>
+                <MarginX>
+                    <HeaderReusable spanTx="Contact" h2_Tx="Me"/>
                     <div className="my-20 sm:flex">
                         <div className="sm:w-1/2 w-full lg:mr-8 md:mr-6 sm:mr-4">
                             <div className="mb-14">
                                 <div className="pb-[6px] border-b-[1px] border-solid border-[#eaeaea]">
-                                    <input type="text" placeholder='Full name' className='w-full font-Montserrat font-medium capitalize text-[17px] text-Main_Tx' />
+                                    <input type="text" className='w-full font-Montserrat font-medium text-[17px] text-Main_Tx' placeholder='Full Name' />
                                 </div>
                             </div>
                             <div className="mb-14">
                                 <div className="pb-[6px] border-b-[1px] border-solid border-[#eaeaea]">
-                                    <input type="email" className='w-full font-Montserrat font-medium capitalize text-[17px] text-Main_Tx' placeholder='Email Address' />
+                                    <input type="email" className='w-full font-Montserrat font-medium text-[17px] text-Main_Tx' placeholder='Email Address' />
                                 </div>
                             </div>
                             <div className="mb-14">
                                 <div className="pb-[6px] border-b-[1px] border-solid border-[#eaeaea]">
-                                    <input type="text" className='w-full font-Montserrat font-medium capitalize text-[17px] text-Main_Tx' placeholder='Your Subject' />
+                                    <input type="text" className='w-full font-Montserrat font-medium text-[17px] text-Main_Tx' placeholder='Your Subject' />
                                 </div>
                             </div>
                             <div className="mb-16">
                                 <div className="pb-[6px] border-b-[1px] border-solid border-[#eaeaea]">
-                                    <input type="text" className='w-full pb-[100px] font-Montserrat font-medium capitalize text-[17px] text-Main_Tx' placeholder='Your Massage' />
+                                    <input type="text" className='w-full pb-[100px] font-Montserrat font-medium text-[17px] text-Main_Tx' placeholder='Your Massage' />
                                 </div>
                             </div>
                             <ul className='flex justify-start'>
@@ -67,9 +66,9 @@ const Contact = () => {
                             </div>
                             <div className="sm:w-1/5 w-full sm:mt-0 mt-4 ">
                                 <ul className='sm:flex sm:justify-end flex justify-center'>
-                                    <li className='ml-6'><a href="#"><FaTwitter className='text-[18px] text-[#fff] opacity-90' /></a></li>
-                                    <li className='ml-6'><a href="#"><FaFacebookF className='text-[18px] text-[#fff] opacity-90' /></a></li>
-                                    <li className='ml-6'><a href="#"><FaLinkedinIn className='text-[18px] text-[#fff] opacity-90' /></a></li>
+                                    <li className='ml-6'><a href="https://twitter.com/prvz_it"><FaTwitter className='text-[18px] text-[#fff] opacity-90' /></a></li>
+                                    <li className='ml-6'><a href="https://www.facebook.com/prvz.it"><FaFacebookF className='text-[18px] text-[#fff] opacity-90' /></a></li>
+                                    <li className='ml-6'><a href="https://www.linkedin.com/in/prvz-it"><FaLinkedinIn className='text-[18px] text-[#fff] opacity-90' /></a></li>
                                     <li className='ml-6'><a href="#"><FaYoutube className='text-[18px] text-[#fff] opacity-90' /></a></li>
                                 </ul>
                             </div>
