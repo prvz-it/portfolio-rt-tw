@@ -4,7 +4,7 @@ const ServicesReusable = ({iconLink, heading, text, buttonText}) => {
   return (
     <>
       <div className="w-full h-[460px]">
-        <div className="py-8 px-7 border-[1px] border-solid border-[#eaeaea] rounded-[12px] text-center group hover:shadow-SDW_2 duration-500">
+        <div className="py-8 px-7 max-[320px]:px-[18px] border-[1px] border-solid border-[#eaeaea] rounded-[12px] text-center group hover:shadow-SDW_2 duration-500">
           <div className="w-16 h-14 mx-auto p-3 relative before:absolute before:content[''] before:top-0 before:left-0 before:w-[50%] before:h-[100%] before:rounded-s-[5px] before:bg-[#f4f4f4] before:duration-500 before:-z-10 group-hover:before:w-full group-hover:before:rounded-e-[5px]">
             <a href="#">
               <img className="w-[40px]" src={iconLink} alt="" />

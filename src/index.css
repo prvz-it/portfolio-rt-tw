@@ -88,6 +88,16 @@ a {
     }
   }
 
+  @media (max-width: 320px) {
+    .service .slick-slide {
+      width: 260px !important;
+    }
+
+    .service .slick-list {
+      height: 580px !important;
+    }
+  }
+
   .service .slick-dots {
     display: flex !important;
     position: absolute;
@@ -179,5 +189,12 @@ a {
     border-radius: 50%;
     background: #f4f4f4;
     z-index: 50;
+  }
+
+  @media (max-width: 320px){
+    .scroll .scroll-to-top{
+      bottom: 20px;
+      right: 15px;
+    }
   }
 }

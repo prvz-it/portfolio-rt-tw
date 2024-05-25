@@ -3,11 +3,11 @@ import CountUp from "react-countup";
 
 const AboutReusable = ({ iconLink, number, text }) => {
   let [condition, setCondition] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-
-      if (scrollY > 1095) {
+      if (scrollY > 1090) {
         setCondition(true);
       }
     };

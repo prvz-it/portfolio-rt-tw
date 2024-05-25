@@ -61,7 +61,7 @@ const Contact = () => {
                         <div className="sm:flex sm:justify-between sm:items-center">
                             <div className="lg:w-2/5 sm:w-3/5 w-full">
                                 <div className="sm:flex sm:justify-start sm:items-center flex justify-center">
-                                    <p className='font-Montserrat font-medium text-base text-[#fff] capitalize tracking-wide opacity-90'>Copyright @ 2024, <span>All right reserved</span></p> 
+                                    <p className='font-Montserrat font-medium text-base text-[#fff] text-center capitalize tracking-wide opacity-90'>Copyright @ 2024, <span>All right reserved</span></p> 
                                 </div>
                             </div>
                             <div className="sm:w-1/5 w-full sm:mt-0 mt-4 ">
