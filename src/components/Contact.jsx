@@ -1,10 +1,10 @@
 import React from 'react';
-import MarginL from './MarginL';
-import Container from './Container';
-import MarginX from './MarginX';
+import MarginL from '../layer/MarginL';
+import Container from '../layer/Container';
+import MarginX from '../layer/MarginX';
 
-import HeaderReusable from './reusable/HeaderReusable';
-import ContactReusable from './reusable/ContactReusable';
+import HeaderReusable from '../reusable/HeaderReusable';
+import ContactReusable from '../reusable/ContactReusable';
 
 import { HiArrowLongRight } from "react-icons/hi2";
 

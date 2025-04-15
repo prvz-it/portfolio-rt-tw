@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'lgx': '1240px',
+      },
       fontFamily: {
         playFair: ['Playfair Display', 'serif'],
         Montserrat: ['Montserrat', 'sans-serif'],

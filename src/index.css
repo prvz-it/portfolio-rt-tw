@@ -32,6 +32,10 @@ a {
   }
 }
 
+a.active{
+  color: red;
+}
+
 @layer components {
   .service .slick-slide {
     width: 370px !important;
@@ -191,8 +195,10 @@ a {
     z-index: 50;
   }
 
-  @media (max-width: 320px){
+  @media (max-width: 640px){
     .scroll .scroll-to-top{
+      width: 24px;
+      height: 24px;
       bottom: 20px;
       right: 15px;
     }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import SkillProgressProvider from "../SkillProgressProvider";
+import SkillProgressProvider from "../components/SkillProgressProvider";
 
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -22,11 +22,11 @@ const SkillReusable = ({ imageLink, number, text }) => {
           </SkillProgressProvider>
           <div className="absolute top-0 left-0 z-0">
             <img src={imageLink} alt="Skill Image 01"
-              className="xl:h-[276px] lg:h-[200px] md:h-[169px] sm:h-[142px] max-[450px]:h-[177px] max-[399px]:h-[158px] max-[350px]:h-[130px] rounded-full"
+              className="xl:h-[276px] lgx:h-[252px] lg:h-[200px] md:h-[169px] sm:h-[142px] max-[450px]:h-[177px] max-[399px]:h-[158px] max-[350px]:h-[130px] rounded-full"
             />
           </div>
-          <div className="absolute top-0 left-0 w-full h-[100px] text-center xl:mt-[172px] lg:mt-[120px] md:mt-[100px] sm:mt-[80px] mt-[105px] max-[400px]:mt-[92px] max-[350px]:mt-[75px] z-20">
-            <h3 className="font-Montserrat font-normal text-[20px] max-[350px]:text-[16px] leading-[28px] uppercase text-Main_Tx">{text}</h3>
+          <div className="absolute top-0 left-0 w-full h-[100px] text-center xl:mt-[172px] lgx:mt-[144px] lg:mt-[120px] md:mt-[100px] sm:mt-[80px] mt-[105px] max-[400px]:mt-[92px] max-[350px]:mt-[75px] z-20">
+            <h3 className="font-Montserrat font-normal sm:text-[14px] md:text-[16px] lg:text-[20px] max-[350px]:text-[16px] leading-[28px] uppercase text-Main_Tx">{text}</h3>
           </div>
         </div>
       </div>

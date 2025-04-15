@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 
 import { AiOutlineHome } from "react-icons/ai";
-import { LuUserCircle2, LuContact2 } from "react-icons/lu";
+import { LuContact } from "react-icons/lu";
+import { LuCircleUser } from "react-icons/lu";
 import { FaRegAddressCard } from "react-icons/fa";
 import { VscFolderOpened } from "react-icons/vsc";
 import { SlBriefcase } from "react-icons/sl";
@@ -10,6 +11,7 @@ import { TfiWrite } from "react-icons/tfi";
 
 import { FaBars } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
 
@@ -17,21 +19,21 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="h-screen fixed left-0 top-0 z-10 bg-[#f7f5ff]">
+      <div className=" fixed left-0 top-0 z-10 bg-[#f7f5ff]">
         <div className="lg:block hidden">
-          <div className="w-[110px] h-[84px] bg-Main text-center">
-            <a href="https://portfolio-pz.netlify.app/">
-              <h2 className='font-Montserrat font-bold text-[56px] text-white text-center'>Pz</h2>
-            </a>
+          <div className="w-[110px] lgx:h-[72px] h-[84px] bg-Main text-center">
+            <Link to="/">
+              <h2 className='font-Montserrat font-bold lgx:text-[52px] leading-[72px] text-[56px] text-white text-center'>Pz</h2>
+            </Link>
           </div>
             <ul>
-              <li><a className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><AiOutlineHome className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="/" />Home</a></li>
-              <li><a className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><LuUserCircle2 className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="#about" />About Me</a></li>
-              <li><a className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><FaRegAddressCard className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="#resume" />Resume</a></li>
-              <li><a className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><SlBriefcase className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="#services" />Services</a></li>
-              <li><a className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><VscFolderOpened className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="#portfolio" />Portfolio</a></li>
-              <li><a className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><TfiWrite className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="#blog" />Blog</a></li>
-              <li><a className='group pl-[7px] pr-2 pt-[8px] pb-[8.5px] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><LuContact2 className='my-2 ml-[34px] mr-[33px] text-[28px] text-[#292929] duration-500 group-hover:text-white' href="#contact" />Contact</a></li>
+              <li><NavLink to="/" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><AiOutlineHome className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Home</NavLink></li>
+              <li><NavLink to="/about" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><LuCircleUser className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />About Me</NavLink></li>
+              <li><NavLink to="/resume" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><FaRegAddressCard className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Resume</NavLink></li>
+              <li><NavLink to="/service" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><SlBriefcase className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Services</NavLink></li>
+              <li><NavLink to="/portfolio" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><VscFolderOpened className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Portfolio</NavLink></li>
+              <li><NavLink to="/blog" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><TfiWrite className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Blog</NavLink></li>
+              <li><NavLink to="/contact" className='group pl-[7px] pr-2 pt-2 pb-2.5 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><LuContact className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Contact</NavLink></li>
             </ul>
           {/* <div className="">
             <button className='w-[110px] h-[220px] bg-Main flex justify-center items-center'><span className='rotate-90 font-Montserrat font-medium uppercase text-[14px] text-white relative after:absolute after:content[""] after:right-[-24px] after:top-[-2px] after:w-[1px] after:h-[25px] after:bg-white after:rotate-90'>Contact me</span></button>
@@ -44,9 +46,9 @@ const Navbar = () => {
       <div className="lg:hidden bg-[#3e4041] ">
         <div className="flex justify-between items-center">
           <div className="w-[64px] h-[62px] bg-Main flex justify-center">
-            <a href="https://portfolio-pz.netlify.app/">
+            <Link to="/">
               <h2 className='font-Montserrat font-bold text-[41px] text-white text-center'>Pz</h2>
-            </a>
+            </Link>
           </div>
             <ul className={ `absolute ${show == true ? 'top-0 left-0 md:w-2/5 sm:w-2/5 w-2/3 max-[350px]:w-4/5 z-10 bg-[#f7f5ff] duration-700' : 'top-0 left-[-100%] w-1/2 duration-700' } ` }>
               <div className="mb-5 pt-[32px] px-[12px] text-center">
@@ -66,13 +68,13 @@ const Navbar = () => {
                     />
                   </span>
               </div>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-t-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><AiOutlineHome className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="/" />Home</a></li>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><LuUserCircle2 className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="#about" />About Me</a></li>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><FaRegAddressCard className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="#resume" />Resume</a></li>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><SlBriefcase className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="#services" />Services</a></li>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><VscFolderOpened className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="#portfolio" />Portfolio</a></li>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><TfiWrite className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="#blog" />Blog</a></li>
-              <li><a className='group w-full flex items-center py-4 px-6 border-b-[1px] border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-[14px] text-[#292929] hover:text-white text-center cursor-pointer'><LuContact2 className='my-2 mr-[20px] text-[24px] text-[#292929] duration-500 group-hover:text-white' href="#contact" />Contact</a></li>
+              <li><NavLink to='/' className='group w-full flex items-center py-4 px-6 border-b border-t border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><AiOutlineHome className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />Home</NavLink></li>
+              <li><NavLink to='/about' className='group w-full flex items-center py-4 px-6 border-b border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><LuCircleUser className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />About Me</NavLink></li>
+              <li><NavLink to='/resume' className='group w-full flex items-center py-4 px-6 border-b border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><FaRegAddressCard className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />Resume</NavLink></li>
+              <li><NavLink to='/service' className='group w-full flex items-center py-4 px-6 border-b border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><SlBriefcase className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />Services</NavLink></li>
+              <li><NavLink to='/portfolio' className='group w-full flex items-center py-4 px-6 border-b border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><VscFolderOpened className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />Portfolio</NavLink></li>
+              <li><NavLink to='/blog' className='group w-full flex items-center py-4 px-6 border-b border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><TfiWrite className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />Blog</NavLink></li>
+              <li><NavLink to='/contact' className='group w-full flex items-center py-4 px-6 border-b border-solid border-[#eaeaea] bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><LuContact className='my-2 mr-5 text-2xl text-Main_Tx duration-500 group-hover:text-white' />Contact</NavLink></li>
             </ul>
           <div className="lg:hidden mr-2 text-[24px] text-white cursor-pointer" onClick={()=>{setShow(!show)}}>
             { show == true ? <RxCross2 /> : <FaBars /> }

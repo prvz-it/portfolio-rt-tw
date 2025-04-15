@@ -1,9 +1,9 @@
 import React from 'react';
-import MarginL from './MarginL';
-import Container from './Container';
-import MarginX from './MarginX';
+import MarginL from '../layer/MarginL';
+import Container from '../layer/Container';
+import MarginX from '../layer/MarginX';
 
-import SkillReusable from './reusable/SkillReusable';
+import SkillReusable from '../reusable/SkillReusable';
 
 const Skill = () => {
   return (
