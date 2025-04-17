@@ -15,7 +15,7 @@ import { SlLayers } from "react-icons/sl";
 import { PiUsers } from "react-icons/pi";
 import { GoTrophy } from "react-icons/go";
 
-import cv from "../assets/Cv.pdf";
+import cv from "../assets/Parvez_Cv.pdf";
 
 const About = () => {
   return (

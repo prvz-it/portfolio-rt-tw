@@ -13,6 +13,8 @@ import { FaBars } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { Link, NavLink } from 'react-router';
 
+import NavReusable from '../reusable/NavReusable';
+
 const Navbar = () => {
 
   let [show, setShow] = useState(false)
@@ -27,13 +29,13 @@ const Navbar = () => {
             </Link>
           </div>
             <ul>
-              <li><NavLink to="/" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><AiOutlineHome className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Home</NavLink></li>
-              <li><NavLink to="/about" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><LuCircleUser className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />About Me</NavLink></li>
-              <li><NavLink to="/resume" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><FaRegAddressCard className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Resume</NavLink></li>
-              <li><NavLink to="/service" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><SlBriefcase className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Services</NavLink></li>
-              <li><NavLink to="/portfolio" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><VscFolderOpened className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Portfolio</NavLink></li>
-              <li><NavLink to="/blog" className='group pl-[7px] pr-2 py-2 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><TfiWrite className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Blog</NavLink></li>
-              <li><NavLink to="/contact" className='group pl-[7px] pr-2 pt-2 pb-2.5 bg-[#f7f5ff] hover:bg-Main_Hv duration-700 font-Montserrat font-medium uppercase text-sm text-Main_Tx hover:text-white text-center cursor-pointer'><LuContact className='my-1.5 ml-9 mr-[35px] lgx:text-2xl text-[28px] text-Main_Tx duration-500 group-hover:text-white' />Contact</NavLink></li>
+              <NavReusable to="/" name="Home" icon={AiOutlineHome} />
+              <NavReusable to="/about" name="About Me" icon={LuCircleUser}/>
+              <NavReusable to="/resume" name="Resume" icon={FaRegAddressCard}/>
+              <NavReusable to="/service" name="Service" icon={SlBriefcase}/>
+              <NavReusable to="/portfolio" name="Portfolio" icon={VscFolderOpened}/>
+              <NavReusable to="/blog" name="Blogs" icon={TfiWrite}/>
+              <NavReusable to="/contact" name="Contact" icon={LuContact}/>
             </ul>
           {/* <div className="">
             <button className='w-[110px] h-[220px] bg-Main flex justify-center items-center'><span className='rotate-90 font-Montserrat font-medium uppercase text-[14px] text-white relative after:absolute after:content[""] after:right-[-24px] after:top-[-2px] after:w-[1px] after:h-[25px] after:bg-white after:rotate-90'>Contact me</span></button>
